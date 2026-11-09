@@ -391,6 +391,111 @@ details[open]>*:not(summary){animation:fadeDown .35s cubic-bezier(.22,.61,.36,1)
 .season-close:hover{background:rgba(255,255,255,.18)}
 .season-close svg{width:18px;height:18px}
 .season-bar[hidden]{display:none}
+
+/* ===== Restyle: plainer, more editorial, less template ===== */
+:root{--radius:10px;--radius-sm:8px;--shadow:0 14px 30px -20px rgba(11,45,91,.35)}
+.btn{border-radius:8px}
+.nav-links a.link{border-radius:6px}
+.section{padding:88px 0}
+.section-head{max-width:none;margin-bottom:40px}
+.section-head.center{text-align:left;margin-left:0;margin-right:0}
+.section-head p{max-width:36em;font-size:18px}
+.section h2{font-size:clamp(1.9rem,3.4vw,2.6rem)}
+.kicker,.eyebrow{display:none}
+
+/* hero */
+.hero{padding:72px 0 88px;background:var(--paper)}
+.hero-grid{grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.hero-place{display:block;font:600 15px/1.2 var(--sans);color:var(--green-deep);margin-bottom:18px}
+.hero h1{font-size:clamp(2.7rem,5.6vw,4.5rem)}
+.hero .lede{font-size:20px;max-width:28em;margin-top:0}
+.hero-call{margin-top:24px;color:var(--muted);font-size:16px}
+.hero-call a{color:var(--navy);font-weight:700;text-decoration:none;border-bottom:2px solid var(--leaf)}
+.hero-call a:hover{border-color:var(--green)}
+.hero-visual{padding:0;margin:0}
+.hero-photo{border-radius:10px;aspect-ratio:4/5}
+.hero-photo::after{display:none}
+.hero-cap{margin-top:12px;font-size:14px;color:var(--muted)}
+
+/* services as plain rows */
+.services{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.srows{border-top:2px solid var(--navy)}
+.srow{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr) auto;gap:28px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:padding-left .3s cubic-bezier(.22,.61,.36,1),background .3s}
+.srow h3{font-size:1.35rem;font-weight:600}
+.srow p{color:var(--muted);font-size:16.5px;line-height:1.55}
+.srow .go{color:var(--teal-deep);font-weight:700;font-size:15px;white-space:nowrap;transition:transform .3s cubic-bezier(.22,.61,.36,1)}
+.srow:hover{padding-left:12px;background:var(--paper)}
+.srow:hover .go{transform:translateX(4px)}
+.more-cta{text-align:left;margin-top:32px}
+
+/* our work */
+.work{background:var(--paper)}
+.work-grid{max-width:none;margin:0;gap:32px}
+.work-item figcaption{padding:0;margin-top:14px}
+.cmp{border-radius:10px;box-shadow:none}
+
+/* how it works */
+.how{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.step{border-top:2px solid var(--navy);padding-top:18px}
+.step b{display:block;font:700 15px/1 var(--sans);color:var(--green-deep);margin-bottom:12px}
+.step h3{font-size:1.3rem;font-weight:600;margin-bottom:8px}
+.step p{color:var(--muted);font-size:16.5px}
+
+/* about */
+.about-grid{grid-template-columns:1.15fr .85fr;gap:72px;align-items:start}
+.about-copy p{font-size:18px}
+.areas-box h3{font:600 1.2rem/1.2 var(--serif);color:var(--navy);margin-bottom:14px}
+.areas-list{list-style:none;margin:0;padding:0;border-top:2px solid var(--navy)}
+.areas-list li{padding:13px 0;border-bottom:1px solid var(--line);font-weight:600;color:var(--navy)}
+
+/* contact */
+.contact::before{display:none}
+.contact-info .btn-primary{background:#fff;color:var(--navy);box-shadow:none}
+.contact-info .btn-primary:hover{background:var(--moss)}
+.contact-lines{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.25)}
+.contact-lines li{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.25)}
+.contact-lines small{display:block;color:#a9bbd1;font-size:14px;margin-bottom:2px}
+.contact-lines a,.contact-lines .v{color:#fff;font:600 1.55rem/1.3 var(--serif);text-decoration:none;word-break:break-word}
+.contact-lines a:hover{text-decoration:underline;text-underline-offset:4px}
+.contact-list svg,.promise svg{display:none}
+.contact-list{gap:0;border-top:1px solid rgba(255,255,255,.25)}
+.contact-list a,.contact-list div{background:none;border:0;border-bottom:1px solid rgba(255,255,255,.25);border-radius:0;padding:14px 0}
+.contact-list a:hover{background:none;transform:none;text-decoration:underline;text-underline-offset:4px}
+.form-card{border-radius:12px}
+
+/* services page */
+.page-hero{text-align:left;padding:72px 0 32px;background:var(--paper)}
+.page-hero p{margin:0;max-width:36em}
+.page-hero h1{margin:0 0 14px}
+.svc{gap:64px;padding:52px 0}
+.svc-media{border-radius:10px;box-shadow:none}
+.svc-copy .icon{display:none}
+.svc-list{margin:18px 0 26px}
+.svc-list svg{display:none}
+.svc-list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);flex:none;margin:0 4px 0 2px}
+.faq details{border-radius:10px}
+.cta-band{text-align:left;padding:64px 0}
+.cta-band p{margin-left:0}
+.cta-band .btn-primary{background:#fff;color:var(--navy);box-shadow:none}
+.cta-band .btn-primary:hover{background:var(--moss)}
+
+@media (max-width:860px){
+  .hero{padding:36px 0 56px}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .hero-grid{gap:32px}
+  .hero-visual{max-width:none;margin:0}
+  .about-grid{gap:36px}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .srow{grid-template-columns:1fr;gap:6px;padding:22px 0}
+  .srow .go{display:none}
+  .srow:hover{padding-left:0}
+  .section{padding:64px 0}
+  .page-hero{padding:44px 0 20px}
+}
+@media (max-width:560px){
+  .contact-lines a,.contact-lines .v{font-size:1.3rem}
+}
 </style>
 </head>
 <body>
@@ -413,8 +518,8 @@ details[open]>*:not(summary){animation:fadeDown .35s cubic-bezier(.22,.61,.36,1)
       <li><a class="link" href="#work">Our Work</a></li>
       <li><a class="link" href="#about">About Us</a></li>
       <li><a class="link" href="#contact">Contact</a></li>
-      <li class="nav-cta desktop"><a class="btn btn-primary btn-sm" href="estimate.html">Get a Free Estimate</a></li>
-      <li class="mobile-cta" style="list-style:none"><a class="btn btn-primary" href="estimate.html">Get a Free Estimate</a></li>
+      <li class="nav-cta desktop"><a class="btn btn-primary btn-sm" href="estimate.html">Get a free estimate</a></li>
+      <li class="mobile-cta" style="list-style:none"><a class="btn btn-primary" href="estimate.html">Get a free estimate</a></li>
     </ul>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
       <svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -429,74 +534,47 @@ details[open]>*:not(summary){animation:fadeDown .35s cubic-bezier(.22,.61,.36,1)
 <section class="hero" id="home">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <span class="eyebrow rise r1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Serving North Tallahassee, FL</span>
+      <span class="hero-place rise r1">Window cleaning in North Tallahassee, FL</span>
       <h1 class="rise r2"><span class="l1">Clear windows.</span><span class="l2">Done with care.</span></h1>
       <span class="rule rise r3" aria-hidden="true"></span>
-      <p class="lede rise r3">Professional interior and exterior window cleaning, screen cleaning, and seasonal home refreshes. We clear away dust, grime, and buildup so you can enjoy the view again.</p>
+      <p class="lede rise r3">We clean the inside and outside of your windows, and the screens too. Free estimates.</p>
       <div class="hero-actions rise r4">
-        <a class="btn btn-primary" href="estimate.html">Request a Free Estimate</a>
-        <a class="btn btn-ghost" href="services.html">Explore Our Services</a>
+        <a class="btn btn-primary" href="estimate.html">Get a free estimate</a>
+        <a class="btn btn-ghost" href="services.html">See our services</a>
       </div>
-      <ul class="hero-points rise r5">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 3 3 5-6"/></svg>Free estimates</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 3 3 5-6"/></svg>Satisfaction guarantee</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 3 3 5-6"/></svg>Inside &amp; out</li>
-      </ul>
+      <p class="hero-call rise r5">Or call or text <a href="tel:+18502945120">850-294-5120</a></p>
     </div>
-    <div class="hero-visual">
+    <figure class="hero-visual rise r3">
       <div class="hero-photo">
-        <img data-img="afterFence" alt="A freshly cleaned window with a crystal-clear view of the yard" width="1659" height="2212" fetchpriority="high" onerror="this.classList.add('missing')">
+        <img data-img="afterFence" alt="A freshly cleaned window with a clear view of the yard" width="1659" height="2212" fetchpriority="high" onerror="this.classList.add('missing')">
       </div>
-      <div class="hero-photo2">
-        <img data-img="afterSill" alt="A clean white window frame and sill after cleaning" width="1086" height="1448" loading="lazy" onerror="this.classList.add('missing')">
-      </div>
-      <div class="hero-badge"><img data-img="logo" alt="Canopy Road Glass Care emblem: a live oak, winding road, and window" width="152" height="152"></div>
-      <div class="hero-tag">The clear choice for clear windows</div>
-    </div>
+      <figcaption class="hero-cap">Real photo from one of our jobs.</figcaption>
+    </figure>
   </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section services" id="services">
   <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="kicker">What we do</span>
-      <h2>Services built around clear glass</h2>
-      <p>From daily smudges to seasonal buildup, we give your windows and screens the careful attention they deserve.</p>
+    <div class="section-head reveal">
+      <h2>What we clean</h2>
     </div>
-    <div class="cards">
-      <article class="card reveal">
-        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M10 3v14M3 10h14"/><path d="M19 15.5v5M16.5 18h5" /></svg></div>
-        <h3>Interior Window Cleaning</h3>
-        <p>Professional cleaning of interior glass to remove fingerprints, dust, smudges, and buildup.</p>
-      </article>
-      <article class="card reveal d1">
-        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.2 6 10.5a6 6 0 0 1-12 0C6 9.2 12 3 12 3Z"/><path d="M9.5 14a2.6 2.6 0 0 0 2.5 2.5"/></svg></div>
-        <h3>Exterior Window Cleaning</h3>
-        <p>Exterior glass cleaning to remove dirt, water spots, and environmental buildup.</p>
-      </article>
-      <article class="card reveal d2">
-        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
-        <h3>Screen Cleaning</h3>
-        <p>Cleaning window screens to remove accumulated dust and debris.</p>
-      </article>
-      <article class="card reveal d3">
-        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4C10 4 4 9 4 15a5 5 0 0 0 5 5c6 0 11-6 11-16Z"/><path d="M4 20c2.5-5 6-8.5 11-11"/></svg></div>
-        <h3>Fall-Winter Home Refresh</h3>
-        <p>A seasonal cleaning service designed to help homeowners freshen up their windows and screens.</p>
-      </article>
+    <div class="srows reveal">
+      <a class="srow" href="services.html#services"><h3>Interior window cleaning</h3><p>Fingerprints, smudges, dust and buildup taken off the inside glass.</p><span class="go">Details &rarr;</span></a>
+      <a class="srow" href="services.html#services"><h3>Exterior window cleaning</h3><p>Dirt, water spots and weather buildup cleaned off the outside glass.</p><span class="go">Details &rarr;</span></a>
+      <a class="srow" href="services.html#services"><h3>Screen cleaning</h3><p>Dust and debris cleaned out of your window screens.</p><span class="go">Details &rarr;</span></a>
+      <a class="srow" href="services.html#services"><h3>Fall-Winter Home Refresh</h3><p>A seasonal clean of your windows and screens as the weather changes.</p><span class="go">Details &rarr;</span></a>
     </div>
-    <div class="more-cta reveal"><a class="btn btn-ghost" href="services.html">See all services &amp; FAQ</a></div>
+    <div class="more-cta reveal"><a class="btn btn-ghost" href="services.html">Services and FAQ</a></div>
   </div>
 </section>
 
 <!-- OUR WORK -->
 <section class="section work" id="work">
   <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="kicker">Our work</span>
-      <h2>See the difference for yourself</h2>
-      <p>These are real results from Canopy Road Glass Care. Drag the handle left and right to compare before and after.</p>
+    <div class="section-head reveal">
+      <h2>Before and after</h2>
+      <p>Real results from our jobs. Drag the handle to compare.</p>
     </div>
     <div class="work-grid">
       <figure class="work-item reveal" style="margin:0">
@@ -533,7 +611,20 @@ details[open]>*:not(summary){animation:fadeDown .35s cubic-bezier(.22,.61,.36,1)
         </figcaption>
       </figure>
     </div>
-    <p class="work-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 7-5 5 5 5"/><path d="m15 7 5 5-5 5"/></svg>Drag, swipe, or use your keyboard arrow keys</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how" id="how">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>How it works</h2>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><b>1</b><h3>Tell us what you need</h3><p>Send a request online, or call or text us. Let us know which service you want.</p></li>
+      <li class="step reveal d1"><b>2</b><h3>Get your free estimate</h3><p>We follow up with an estimate. There is no charge to ask.</p></li>
+      <li class="step reveal d2"><b>3</b><h3>We clean your windows</h3><p>If you are not happy with the result, tell us. We stand behind our work with a satisfaction guarantee.</p></li>
+    </ol>
   </div>
 </section>
 
@@ -541,44 +632,21 @@ details[open]>*:not(summary){animation:fadeDown .35s cubic-bezier(.22,.61,.36,1)
 <section class="section about" id="about">
   <div class="wrap about-grid">
     <div class="about-copy reveal">
-      <span class="kicker">About us</span>
-      <h2>Clean, clear windows, cared for properly</h2>
-      <p>Canopy Road Glass Care is a local window cleaning company serving homeowners in North Tallahassee. We believe a clean window changes how a home feels, with more light, a better view, and a fresher look inside and out.</p>
-      <p>Every job gets steady, careful attention. We treat your home with respect, work with professionalism, and stand behind our work with a satisfaction guarantee.</p>
+      <h2>About Canopy Road Glass Care</h2>
+      <p>We are a local window cleaning company serving homeowners in North Tallahassee. Clean windows let in more light and make a house feel better, so we pay attention to the details: the glass, the frames, the sills and the screens.</p>
+      <p>You get a free estimate before any work starts, and a satisfaction guarantee after it.</p>
       <!-- PLACEHOLDER: Add owner name, photo, and personal story here when available. -->
       <!-- PLACEHOLDER: Add years in business, certifications, or awards here only once verified. -->
-      <div class="areas">
-        <h3>Neighborhoods we serve</h3>
-        <ul class="chips">
-          <li>Killearn</li>
-          <li>Lake Jackson</li>
-          <li>Betton Hills</li>
-          <li>Northeast Tallahassee</li>
-          <li>Summerbrooke</li>
-        </ul>
-      </div>
     </div>
-    <div class="about-visual values reveal d1">
-      <div class="value">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6 .7-4.4 4.1 1.2 6L12 16.5 6.6 19.4l1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-        <h3>Quality first</h3>
-        <p>We aim for streak-free, spotless glass, and we stand behind it.</p>
-      </div>
-      <div class="value">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
-        <h3>Eye for detail</h3>
-        <p>Frames, tracks, sills, and screens get attention too, not just the glass.</p>
-      </div>
-      <div class="value">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg>
-        <h3>Professional service</h3>
-        <p>Clear communication, respect for your home, and reliable follow-through.</p>
-      </div>
-      <div class="value">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5h4v5"/></svg>
-        <h3>Homeowner friendly</h3>
-        <p>Simple estimates and an easy process so you can enjoy your view.</p>
-      </div>
+    <div class="areas-box reveal d1">
+      <h3>Where we work</h3>
+      <ul class="areas-list">
+        <li>Killearn</li>
+        <li>Lake Jackson</li>
+        <li>Betton Hills</li>
+        <li>Northeast Tallahassee</li>
+        <li>Summerbrooke</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -587,31 +655,16 @@ details[open]>*:not(summary){animation:fadeDown .35s cubic-bezier(.22,.61,.36,1)
 <section class="section contact" id="contact">
   <div class="wrap contact-grid">
     <div class="contact-info reveal">
-      <span class="kicker">Contact</span>
-      <h2>Let's get your windows sparkling</h2>
-      <p class="lede">Tell us a little about your home and what you need. We'll get back to you with a free estimate. Prefer to talk? You can also call us anytime.</p>
-      <ul class="contact-list">
-        <li><a href="tel:+18502945120"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><span><small>Call us</small>850-294-5120</span></a></li>
-        <li><a href="sms:+18502945120"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4V5Z"/></svg><span><small>Text us</small>850-294-5120</span></a></li>
-        <li><a href="mailto:jptomkiewicz@icloud.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg><span><small>Email us</small>jptomkiewicz@icloud.com</span></a></li>
-        <li><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span><small>Service area</small>North Tallahassee, FL</span></div></li>
-      </ul>
-      <div class="promise"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><span>Backed by our satisfaction guarantee.</span></div>
+      <h2>Ready for clearer windows?</h2>
+      <p class="lede">Send us a request and we will follow up with a free estimate. You can also just call or text.</p>
+      <p style="margin-top:28px"><a class="btn btn-primary" href="estimate.html">Get a free estimate</a></p>
     </div>
-
-    
-    <div class="cta-card reveal d1">
-      <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9L12 3Z"/><path d="M18.5 15.5v4M16.5 17.5h4"/></svg></div>
-      <h3>Request your free estimate</h3>
-      <p>Tell us which service you need and a little about your home. We'll follow up with your free estimate.</p>
-      <ul class="cta-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 3 3 5-6"/></svg>Choose your service</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 3 3 5-6"/></svg>Tell us about your property</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 3 3 5-6"/></svg>We follow up with your estimate</li>
-      </ul>
-      <a class="btn btn-primary" href="estimate.html">Request My Free Estimate</a>
-      <p class="fine">Prefer to call or text? <a href="tel:+18502945120">850-294-5120</a></p>
-    </div>
+    <ul class="contact-lines reveal d1">
+      <li><small>Call</small><a href="tel:+18502945120">850-294-5120</a></li>
+      <li><small>Text</small><a href="sms:+18502945120">850-294-5120</a></li>
+      <li><small>Email</small><a href="mailto:jptomkiewicz@icloud.com">jptomkiewicz@icloud.com</a></li>
+      <li><small>Service area</small><span class="v">North Tallahassee, FL</span></li>
+    </ul>
   </div>
 </section>
 
@@ -625,7 +678,7 @@ details[open]>*:not(summary){animation:fadeDown .35s cubic-bezier(.22,.61,.36,1)
           <img data-img="logo" alt="Canopy Road Glass Care logo" width="52" height="52" loading="lazy" style="background:#fff;padding:2px">
           <span>Canopy Road<br>Glass Care<small>North Tallahassee</small></span>
         </a>
-        <p>The clear choice for clear windows. Interior and exterior window cleaning, screen cleaning, and seasonal home refreshes for North Tallahassee homeowners.</p>
+        <p>Window cleaning for homes in North Tallahassee: inside and outside glass, screens, and seasonal cleaning.</p>
       </div>
       <div>
         <h3>Navigate</h3>
