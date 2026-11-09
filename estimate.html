@@ -29,7 +29,7 @@
   "@type": "HomeAndConstructionBusiness",
   "name": "Canopy Road Glass Care",
   "url": "https://glasscare.github.io/canopy-road-glass-care/",
-  "description": "Exterior window cleaning, including glass, frames and screens, and seasonal home refresh services in North Tallahassee, FL.",
+  "description": "Exterior window cleaning, including glass, frames and screens, in North Tallahassee, FL.",
   "telephone": "+1-850-294-5120",
   "email": "jptomkiewicz@icloud.com",
   "areaServed": "North Tallahassee, FL"
@@ -376,14 +376,6 @@ details[open]>*:not(summary){animation:fadeDown .35s cubic-bezier(.22,.61,.36,1)
   .page-hero{padding:44px 0 36px}
 }
 
-.season-bar{position:relative;background:var(--green-deep);color:#fff;font-size:15px;line-height:1.45;text-align:center;padding:11px 52px 11px 18px}
-.season-bar a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
-.season-bar a:hover{text-decoration-thickness:2px}
-.season-bar strong{font-weight:700}
-.season-close{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:40px;height:40px;border:0;border-radius:50%;background:transparent;color:#fff;cursor:pointer;display:grid;place-items:center;transition:background .2s}
-.season-close:hover{background:rgba(255,255,255,.18)}
-.season-close svg{width:18px;height:18px}
-.season-bar[hidden]{display:none}
 
 /* ===== Restyle: plainer, more editorial, less template ===== */
 :root{--radius:10px;--radius-sm:8px;--shadow:0 14px 30px -20px rgba(11,45,91,.35)}
@@ -565,8 +557,7 @@ details[open]>*:not(summary){animation:fadeDown .35s cubic-bezier(.22,.61,.36,1)
             <select id="service" name="service" required>
               <option value="">Select a service</option>
               <option>Exterior Window Cleaning</option>
-              <option>Fall-Winter Home Refresh</option>
-              <option>Not sure</option>
+              <option>Something else</option>
             </select>
             <div class="err" data-err="service">Please choose a service.</div>
           </div>
@@ -613,7 +604,7 @@ details[open]>*:not(summary){animation:fadeDown .35s cubic-bezier(.22,.61,.36,1)
           <img data-img="logo" alt="Canopy Road Glass Care logo" width="52" height="52" loading="lazy" style="background:#fff;padding:2px">
           <span>Canopy Road<br>Glass Care<small>North Tallahassee</small></span>
         </a>
-        <p>Exterior window cleaning for homes in North Tallahassee, including glass, frames and screens, plus seasonal cleaning.</p>
+        <p>Exterior window cleaning for homes in North Tallahassee, including the glass, frames and screens.</p>
       </div>
       <div>
         <h3>Navigate</h3>
@@ -770,23 +761,6 @@ window.CRGC_IMG = {"logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAA
 </script>
 <script>
 (function(){try{var p=new URLSearchParams(location.search).get('service');if(!p)return;var sel=document.getElementById('service');for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===p){sel.selectedIndex=i;break;}}}catch(e){}})();
-</script>
-<script>
-(function(){
-  var bar = document.getElementById('seasonBar');
-  if (bar){
-    var key = 'crgcSeasonBarClosed', closed = false, expired = false;
-    try { closed = localStorage.getItem(key) === '1'; } catch(e){}
-    var until = bar.getAttribute('data-until');
-    if (until && new Date() > new Date(until + 'T23:59:59')) expired = true;
-    if (closed || expired) bar.hidden = true;
-    var btn = document.getElementById('seasonClose');
-    if (btn) btn.addEventListener('click', function(){
-      bar.hidden = true;
-      try { localStorage.setItem(key, '1'); } catch(e){}
-    });
-  }
-})();
 </script>
 </body>
 </html>

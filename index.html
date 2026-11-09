@@ -29,7 +29,7 @@
   "@type": "HomeAndConstructionBusiness",
   "name": "Canopy Road Glass Care",
   "url": "https://glasscare.github.io/canopy-road-glass-care/",
-  "description": "Exterior window cleaning, including glass, frames and screens, and seasonal home refresh services in North Tallahassee, FL.",
+  "description": "Exterior window cleaning, including glass, frames and screens, in North Tallahassee, FL.",
   "telephone": "+1-850-294-5120",
   "email": "jptomkiewicz@icloud.com",
   "areaServed": "North Tallahassee, FL"
@@ -382,14 +382,6 @@ details[open]>*:not(summary){animation:fadeDown .35s cubic-bezier(.22,.61,.36,1)
   .page-hero{padding:44px 0 36px}
 }
 
-.season-bar{position:relative;background:var(--green-deep);color:#fff;font-size:15px;line-height:1.45;text-align:center;padding:11px 52px 11px 18px}
-.season-bar a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
-.season-bar a:hover{text-decoration-thickness:2px}
-.season-bar strong{font-weight:700}
-.season-close{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:40px;height:40px;border:0;border-radius:50%;background:transparent;color:#fff;cursor:pointer;display:grid;place-items:center;transition:background .2s}
-.season-close:hover{background:rgba(255,255,255,.18)}
-.season-close svg{width:18px;height:18px}
-.season-bar[hidden]{display:none}
 
 /* ===== Restyle: plainer, more editorial, less template ===== */
 :root{--radius:10px;--radius-sm:8px;--shadow:0 14px 30px -20px rgba(11,45,91,.35)}
@@ -502,11 +494,6 @@ details[open]>*:not(summary){animation:fadeDown .35s cubic-bezier(.22,.61,.36,1)
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 
-<div class="season-bar" id="seasonBar" data-until="2026-12-25" hidden role="region" aria-label="Seasonal offer">
-  <span><strong>Fall-Winter Home Refresh:</strong> give your windows and screens a fresh start this season. <a href="estimate.html?service=Fall-Winter+Home+Refresh">Get a free estimate</a></span>
-  <button class="season-close" type="button" id="seasonClose" aria-label="Dismiss announcement"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-</div>
-
 <header class="site-header" id="top">
   <div class="wrap nav">
     <a class="brand" href="#home" aria-label="Canopy Road Glass Care, home">
@@ -558,13 +545,11 @@ details[open]>*:not(summary){animation:fadeDown .35s cubic-bezier(.22,.61,.36,1)
 <section class="section services" id="services">
   <div class="wrap">
     <div class="section-head reveal">
-      <h2>What we clean</h2>
+      <h2>What we do</h2>
     </div>
     <div class="srows reveal">
       <a class="srow" href="services.html#services"><h3>Exterior window cleaning</h3><p>The outside of your windows cleaned of dirt, water spots and buildup. The glass, frames and screens are all part of the job.</p><span class="go">Details &rarr;</span></a>
-      <a class="srow" href="services.html#services"><h3>Fall-Winter Home Refresh</h3><p>A seasonal clean of your windows and screens as the weather changes.</p><span class="go">Details &rarr;</span></a>
     </div>
-    <div class="more-cta reveal"><a class="btn btn-ghost" href="services.html">Services and FAQ</a></div>
   </div>
 </section>
 
@@ -676,7 +661,7 @@ details[open]>*:not(summary){animation:fadeDown .35s cubic-bezier(.22,.61,.36,1)
           <img data-img="logo" alt="Canopy Road Glass Care logo" width="52" height="52" loading="lazy" style="background:#fff;padding:2px">
           <span>Canopy Road<br>Glass Care<small>North Tallahassee</small></span>
         </a>
-        <p>Exterior window cleaning for homes in North Tallahassee, including glass, frames and screens, plus seasonal cleaning.</p>
+        <p>Exterior window cleaning for homes in North Tallahassee, including the glass, frames and screens.</p>
       </div>
       <div>
         <h3>Navigate</h3>
@@ -832,23 +817,6 @@ window.CRGC_IMG = {"afterFence": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQA
   document.querySelectorAll('[data-cmp]').forEach(initCompare);
 
   })();
-</script>
-<script>
-(function(){
-  var bar = document.getElementById('seasonBar');
-  if (bar){
-    var key = 'crgcSeasonBarClosed', closed = false, expired = false;
-    try { closed = localStorage.getItem(key) === '1'; } catch(e){}
-    var until = bar.getAttribute('data-until');
-    if (until && new Date() > new Date(until + 'T23:59:59')) expired = true;
-    bar.hidden = !!(closed || expired);
-    var btn = document.getElementById('seasonClose');
-    if (btn) btn.addEventListener('click', function(){
-      bar.hidden = true;
-      try { localStorage.setItem(key, '1'); } catch(e){}
-    });
-  }
-})();
 </script>
 </body>
 </html>
